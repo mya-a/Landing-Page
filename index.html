@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Landing page</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    h2{
+        color: #4D4D4D;
+    }
+    .nav{
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(255, 255, 255);
+        height: 50px;
+        padding-left: 110px;
+        padding-right: 100px;
+        align-items: center;
+        padding-bottom: 0;
+        padding-top: 10px;
+        top: 0;
+        position: fixed;
+        width: 100%;
+    }
+    .nav img{
+        width: 10.7vw;
+        height: 25px;
+        margin-top: 0px;
+    }
+    .nav-links{
+        display: flex;
+    }
+    .nav-links ul{
+        display: flex;
+        list-style: none;
+        margin-right: 10px;
+    }
+    .nav-links img{
+        width: 13px;
+        height: 13px;
+        margin-bottom: 0px;
+        margin-top: 0;
+    }
+    .nav-links ul li{
+        font-size: 18px;
+        margin-left: 10px;
+        margin-right: 20px;
+    }
+    .nav-links button {
+        width: 191px;
+        height: 50px;
+        background-color: #4CAF4F;
+        color: rgb(255, 255, 255);
+        border-style: none;
+        border-radius: 5px;
+        font-size: 15px;
+        align-items: center;
+        justify-content: center;
+    }
+    .hero{
+        background-color:#F5F7FA;
+        margin-top: 50px;
+        height: 500px;
+        display: flex;
+        justify-content: space-between;
+        font-family: sans-serif;
+        padding-left: 143.99px;
+        padding-right: 143.99px;
+        padding-top: 80px;
+    }
+    .hero img{
+        width: 27.252vw;
+        height: 28.26vw;
+    }
+    .hero h1{
+        font-size:65px;
+        font-weight:normal;
+        margin-bottom: 40px;
+        color: #4D4D4D;
+        margin-bottom: 20px;
+    }
+    .hero p{
+        font-weight: 500;
+        font-size: 16px;
+        color:#717171;
+        margin-bottom: 20px;
+    }
+    .hero button{
+        width: 128.65px;
+        height: 52.42px;
+        border-radius: 3px;
+        border-style: none;
+        color: rgb(255, 255, 255);
+        background-color: #4CAF4F;
+        font-size: 15px;
+    }
+    .clients{
+        padding: 0px, 100.23px, 0px, 100.23px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .clients h2{
+        font-size: 33px;
+        font-weight: 500;
+        margin-bottom: 14px;
+    }
+    .clients p{
+        margin-top: 0;
+        color: #717171;
+        font-weight: 300;
+    }
+    .clients img{
+        width: 1151.99px;
+    }
+    .suitable{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+    }
+    .suitable h2{
+        font-size: 33px;
+        font-weight: 500;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .suitable p{
+        color: #717171;
+        font-weight: 300;
+        margin-top: 0;
+    }
+    .suitable-items{
+        display: flex;
+        justify-content: space-between;
+    }
+    .item{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+        border: 0.1px solid #f2f0f0;
+        padding: 15px;
+        margin: 40px;
+        margin-top: 20px;
+        box-shadow: 0px 3px rgb(235, 235, 235);
+        border-radius: 3px;
+    }
+    .item h3{
+        font-size: 25px;
+    }
+    .item p{
+        font-size: 16px;
+        color: #9e9e9e;
+    }
+    .item img{
+        width: 64.99px;
+        height: 56px;
+    }
+    .unseen {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .unseen-items{
+        margin-top: 0;
+    }
+    .unseen img{
+        width: 441.54px;
+        height: 400.7px;
+    }
+    .unseen h2{
+        font-size: 35px;
+        font-weight: 500;
+    }
+    .unseen p{
+        font-size: 13px;
+        color: #717171;
+    }
+    .unseen button{
+        width: 151.63px;
+        height: 52.42px;
+        background-color: #4CAF4F;
+        color: #ffffff;
+        border-style: none;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+    .local{
+        display: flex;
+        background-color:#F5F7FA;
+        justify-content: space-between;
+        padding-left: 210px;
+        padding-right: 210px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        margin-bottom: 20px;
+    }
+    .local h2{
+        font-size: 35px;
+        font-weight: 500;
+        margin-top: 42px;
+    }
+    .one{
+        display: flex;
+    }
+    .unit{
+        display: flex;
+        align-items: center;
+        align-content: center;
+        width: 255px;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    .unit img{
+        width: 48px;
+        height: 48px;
+        margin-right: 20px;
+    }
+    .unit h3{
+        margin-bottom: 10px;
+    }
+    .unit p{
+        margin-top: 10px;
+    }
+    .how-to{
+        display: flex;
+        justify-content: center;
+    }
+    .how-to img{
+        width: 441.54px;
+        height: 433.4px;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+    .content button{
+        width: 137.63px;
+        height: 47.42px;
+        background-color: #4CAF4F;
+        color: #ffffff;
+        border-style: none;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+    .content h2{
+        font-size: 37px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+    .content p{
+        font-size: 13px;
+        color: #717171;
+    }
+    .tesla{
+        background-color: #F5F7FA;
+        display: flex;
+        padding-top: 32px;
+        padding-bottom: 22px;
+        justify-content: center;
+    }
+    .tesla-content{
+        margin-left: 30px;
+    }
+
+    #three{
+        width: 326.03px;
+        height: 326.03px;
+        margin-right: 30px;
+    }
+    .tesla h4{
+        color: #4CAF4F;
+        font-size: 20px;
+        margin: 0;
+    }
+    .tesla p{
+        color: #717171;
+        font-size: 16px;
+        width: 748px;
+        line-height: 23px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    #four{
+        margin-bottom: 13px;
+    }
+    #five{
+        font-weight: 100;
+        color: #9e9e9e;
+        margin-top: 5px;
+        margin-bottom: 15px;
+    }
+    #six{
+        width: 747px;
+    }
+    .market{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 100px;
+    }
+    .market h2{
+        text-align: center;
+        font-size: 35px;
+        font-weight: 500;
+        color:#4D4D4D;
+        margin-bottom: 0;
+    }
+    .market-icons{
+        display: flex;
+        justify-content: center;
+    }
+    .market p{
+        text-align: center;
+        color: #717171;
+        margin-bottom: 50px;
+        line-height: 23px;
+        font-weight: 200;
+    }
+    .market-descrip{
+        background-color: #F5F7FA;
+        width: 316.99px;
+        height: 178.57px;
+        justify-content: center;
+        text-align: center;
+        position: absolute;
+        margin-top: 150px;
+        border-radius: 10px;
+        align-self: center;
+        box-shadow: 2px 2px 8px #d7d7d7;
+    }
+    .market-descrip h3{
+        font-size: 19px;
+        line-height: 28px;
+        color: #454545;
+        font-weight: 500;
+    }
+    .market-descrip img{
+        width: 14.58px;
+    }
+    .market-descrip button{
+        border-style: none;
+        background-color: #F5F7FA;
+        color: #4CAF4F;
+        font-size: 17px;
+    }
+    .image{
+        display: flex;
+        flex-direction: column;
+    }
+    .market-image{
+        position: relative;
+        bottom: 30px;
+    }
+    .market-image img{
+        width: 367.99px;
+        height: 285.07px;
+    }
+    .demo{
+        background-color: #F5F7FA;
+        height: 300.7px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    .demo h1{
+        font-size:65px;
+        font-weight: 400;
+        margin-bottom: 10px;
+        margin-top: 0px;
+    }
+    .demo img{
+        width: 20px;
+        margin-bottom: 0;
+        justify-content: center;
+    }
+    .demo button{
+        width: 171.63px;
+        height: 52.42px;
+        background-color: #4CAF4F;
+        color: #ffffff;
+        border-style: none;
+        border-radius: 4px;
+        font-size: 16px;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer{
+        background-color: #263238;
+        height: 329.29px;
+        display: flex;
+        justify-content: center;
+        padding-top: 80px;
+    }
+    .footer-descrip{
+        width: 349.99px;
+        height: 189.89px ;
+        margin-right: 110px;
+    }
+    .footer-descrip p{
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 300;
+    }
+    .footer-descrip img{
+        width: 190.95px;
+        margin-bottom: 20px;
+    }
+    #seven{
+        margin-bottom: 0;
+        margin-top: 20px;
+    }
+    .footer-content{
+        display: flex;
+        justify-content: space-between;
+        width: 634.99px;
+        height: 201.3px;
+        color: #ffffff;
+        padding-top: 0;
+    }
+    .footer-content ul{
+        padding-left: 0;
+    }
+    .footer-content ul li{
+        list-style: none;
+        line-height: 32px;
+        margin-left: 0;
+        font-weight: 300;
+        font-size: 15px;
+    }
+    .footer-links{
+        display: flex;
+        padding-top: 0;
+    }
+    .footer-colomn{
+        margin-top: 0;
+        margin-right: 80px;
+    }
+    .footer h4{
+        margin-top: 0;
+        font-size: 22px;
+        margin-bottom: 0px;
+        font-weight: 400;
+    }
+    .footer-email{
+        width: 255.8px;
+    }
+    input{
+        position: relative;
+        height: 35px;
+        background-color: #828282;
+        border-style: none;
+        border-radius: 5px;
+        width: 255px;
+        font-size: 15px;
+    }
+    input ::placeholder{
+        margin-left: 10px;
+        color: #ffffff;
+    }
+    .text{
+        width: 255px;
+        height: 7px;
+    }
+    .text img{
+        position: absolute;
+        left: 160px;
+        align-self: center;
+        top: 15px;
+    }
+</style>
+<body>
+    <div class="nav">
+        <img src="Logo.png" alt="Company logo">
+        <div class="nav-links">
+            <ul>
+                <li>Home</li>
+                <li>Features</li>
+                <li>Community</li>
+                <li>Blog</li>
+                <li>Pricing</li>
+            </ul>
+            <button>
+                Register Now
+                <img src="right-arrow.png" alt="arrow icon">
+            </button>
+        </div>
+    </div>
+    <div class="hero">
+        <div class="hero-items">
+            <h1>
+                Lesson and insights<br>
+                <span style="color: #4CAF4F">from 8 years</span>
+            </h1>
+            <p>
+                Where to grow your business as a photographer: site or social media?
+            </p>
+            <button>
+                Register
+            </button>
+        </div>
+        <img src="Illustration.png" alt="an illustration of a man holding a laptop watching a screen">
+    </div>
+    <div class="clients">
+        <h2>
+            Our clients
+        </h2>
+        <p>
+            We have been working with some Fortune 500+ clients
+        </p>
+        <img src="Clients Logos.png" alt="client logos">
+    </div>
+    <div class="suitable">
+        <h2>
+            Manage your entire community<br>
+            in a single system
+        </h2>
+        <p>
+            Who is Nextcent suitable for?
+        </p>
+        <div class="suitable-items">
+            <div class="item">
+                <img src="Icon c.png" alt="icon">
+                <h3>
+                    Memebership <br>
+                    Organizations
+                </h3>
+                <p>
+                    Our membership management <br>
+                    software provides full automation of<br>
+                     membership renewals and payments
+                </p>
+            </div>
+            <div class="item">
+                <img src="Icon c(2).png" alt="icon">
+                <h3>
+                    National <br>
+                    Associations
+                </h3>
+                <p>
+                    Our membership management <br>
+                    software provides full automation of<br>
+                     membership renewals and <br>
+                     payments
+                </p>
+            </div>
+            <div class="item">
+                <img src="Icon c(3).png" alt="icon">
+                <h3>
+                    Clubs And<br>
+                    Groups
+                </h3>
+                <p>
+                    Our membership management <br>
+                    software provides full automation of<br>
+                    membership renewals and payments
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="unseen">
+        <img src="Frame 35.png" alt="ai generated">
+        <div class="unseen-content">
+            <H2>The unseen of spending three <br>
+                years at Pixelgrade</H2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo ipsum. Sed <br>
+                accumsan quam vitae est varius fringilla. Pellentesque placerat vestibulum lorem sed <br>
+                porta. Nullam mattis tristique iaculis. Nullam pulvinar sit amet risus pretium auctor. Etiam <br>
+                quis massa pulvinar, aliquam quam vitae, tempus sem. Donec elementum pulvinar odio
+            </p>
+            <button>
+                Learn more
+            </button>
+        </div>
+    </div>
+    <div class="local">
+        <div>
+            <h2>Helping a local <br>
+                <span style="color: #4CAF4F;">business reinvent itself</span></h2>
+            <p>We reached here with our hard work and dedication</p>
+        </div>
+        <div class="statistics">
+            <div class="one">
+                <div class="unit">
+                    <img src="Icon 2.png" alt="an icon">
+                    <div>
+                        <h3>
+                            2,245,341
+                        </h3>
+                        <p>Members</p>
+                    </div>
+                </div>
+                <div class="unit">
+                    <img src="Icon (2) 2.png" alt="an icon">
+                    <div>
+                        <h3>
+                            46,328
+                        </h3>
+                        <p>Clubs</p>
+                    </div>
+                </div>
+            </div>
+            <div class="one">
+                <div class="unit">
+                    <img src="Icon (1).png" alt="an icon">
+                    <div>
+                        <h3>
+                            828,867
+                        </h3>
+                        <p>Event Bookings</p>
+                    </div>
+                </div>
+                <div class="unit">
+                    <img src="Icon (3) 2.png" alt="an icon">
+                    <div>
+                        <h3>
+                            1,926,436
+                        </h3>
+                        <p>Payments</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="how-to">
+        <img src="pana.png" alt="a picture">
+        <div class="content">
+            <h2>How to design your site footer like<br>
+                we did</h2>
+            <p>
+                Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor, augue nec tincidunt <br>
+                molestie, massa nunc varius arcu, at scelerisque elit erat a magna. Donec quis erat at <br>
+                libero ultrices mollis. In hac habitasse platea dictumst. Vivamus vehicula leo dui, at porta <br>
+                nisi facilisis finibus. In euismod augue vitae nisi ultricies, non aliquet urna tincidunt. Integer <br>
+                in nisi eget nulla commodo faucibus efficitur quis massa. Praesent felis est, finibus et nisi <br>
+                ac, hendrerit venenatis libero. Donec consectetur faucibus ipsum id gravida.
+            </p>
+            <button>
+                Learn more
+            </button>
+        </div>
+    </div>
+    <div class="tesla">
+        <img src="image 9.png" alt="a tesla logo" id="three">
+        <div class="tesla-content">
+            <p id="four">
+                Maecenas dignissim justo eget nulla rutrum molestie. Maecenas lobortis sem dui, vel rutrum risus <br>
+                tincidunt ullamcorper. Proin eu enim metus. Vivamus sed libero ornare, tristique quam in, gravida <br>
+                enim. Nullam ut molestie arcu, at hendrerit elit. Morbi laoreet elit at ligula molestie, nec molestie <br>
+                mi blandit. Suspendisse cursus tellus sed augue ultrices, quis tristique nulla sodales. Suspendisse <br>
+                eget lorem eu turpis vestibulum pretium. Suspendisse potenti. Quisque malesuada enim sapien, <br>
+                vitae placerat ante feugiat eget. Quisque vulputate odio neque, eget efficitur libero condimentum <br>
+                id. Curabitur id nibh id sem dignissim finibus ac sit amet magna.
+            </p>
+            <h4>
+                Tim Smith
+            </h4>
+            <p id="five">
+                British Dragon Boat Racing Association
+            </p>
+            <img src="Frame 14.png" id="six">
+        </div>
+    </div>
+    <div class="market">
+        <h2>
+            Caring is the new marketing
+        </h2>
+        <p>
+            The Nextcent blog is the best place to read about the latest membership insights,<br>
+             trends and more. See who's joining the community, read about how our community <br>
+             are increasing their membership income and lot's more.
+        </p>
+        <div class="market-icons">
+
+
+            <div class="image">
+                <div class="market-image">
+                    <img src="image 18.png" alt="a woman using her laptop">
+                </div>
+                <div class="market-descrip">
+                    <h3>
+                        Creating Streamlined <br>
+                        Safeguarding Processes with <br>
+                        OneRen.
+                    </h3>
+                    <button>
+                        Readmore <img src="right-arrow green.png" alt="a green arrow pointing to the right">
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="image">
+                <div class="market-image">
+                    <img src="image 19.png" alt="a woman using her laptop">
+                </div>
+                <div class="market-descrip">
+                    <h3>
+                        What are your safeguarding <br>
+                        responsibilities and how can <br>
+                        you manage them?
+                    </h3>
+                    <button>
+                        Readmore <img src="right-arrow green.png" alt="a green arrow pointing to the right">
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="image">
+                <div class="market-image">
+                    <img src="image 20.png" alt="a woman using her laptop">
+                </div>
+                <div class="market-descrip">
+                    <h3>
+                        Revamping the Membership <br>
+                        Model with Triathlon <br>
+                        Australia
+                    </h3>
+                    <button>
+                        Readmore <img src="right-arrow green.png" alt="a green arrow pointing to the right">
+                    </button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="demo">
+        <h1>
+            Pellentesque suscipit <br>
+            fringilla libero eu.
+        </h1>
+        <button>
+            Get a Demo <img src="right-arrow.png" alt="green arrow">
+        </button>
+    </div>
+    <div class="footer">
+        <div class="footer-descrip">
+            <img src="Logo2.png" alt="Company logo" id="eight">
+            <p>
+                Copyright © 2020 Landify UI Kit.
+            </p>
+            <p>
+                All rights reserved
+            </p>
+            <img src="Social Links.png" alt="social links" id="seven">
+        </div>
+        
+        <div class="footer-content">
+            <div class="footer-links">
+                <div class="footer-colomn">
+                    <h4>
+                        Company
+                    </h4>
+                    <ul>
+                        <li>About us</li>
+                        <li>Blog</li>
+                        <li>Contact us</li>
+                        <li>Pricing</li>
+                        <li>Testimonials</li>
+                    </ul>
+                </div>
+                <div class="footer-colomn">
+                    <h4>
+                        Support
+                    </h4>
+                    <ul>
+                        <li>Help center</li>
+                        <li>Terms of service</li>
+                        <li>Legal</li>
+                        <li>Privacy policy</li>
+                        <li>Status</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-email">
+                <h4>Stay up to date</h4>
+                <form action="">
+                    <div class="text">
+                        <input type="text" placeholder="your email address">
+                        <img src="send.png" alt="a seend icon">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
